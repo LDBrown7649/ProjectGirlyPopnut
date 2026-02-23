@@ -4,6 +4,7 @@ class_name Character extends CharacterBody2D
 @export var maxHealth : float = 100
 var health : float = 100
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Reset()
@@ -22,4 +23,5 @@ func Damage(damage):
 		Kill()
 	
 func Kill():
+	queue_free()
 	pass

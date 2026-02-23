@@ -35,7 +35,7 @@ func Shoot():
 			
 	var mouse_pos: Vector2 = get_global_mouse_position()
 	var dir = (mouse_pos - global_position).normalized()
-	bullet.Shoot(global_position+dir*shootFromDistance, dir)
+	bullet.Shoot(global_position+dir*shootFromDistance, dir, self)
 	shootDelayTimer = 0
 	
 

@@ -34,20 +34,8 @@ script = ExtResource("4_0ib4m")
 list = Array[ExtResource("5_ufjxb")]([SubResource("Resource_iq2kk")])
 metadata/_custom_type_script = "uid://lfsat02oebop"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ib4m"]
-size = Vector2(1117.25, 676)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ei8k"]
 size = Vector2(540.5, 676)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufjxb"]
-size = Vector2(475.78125, 225.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iq2kk"]
-size = Vector2(979.125, 187.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqn7c"]
-size = Vector2(622.25, 415)
 
 [node name="Map1" type="Node2D" unique_id=1864018422]
 
@@ -197,57 +185,11 @@ roundConfigs = Dictionary[int, ExtResource("4_0ib4m")]({
 0: SubResource("Resource_gqn7c")
 })
 
-[node name="SpawnArea2" type="Area2D" parent="EnemySpawnManager" unique_id=201215749]
-position = Vector2(-216, -716)
-collision_layer = 256
-collision_mask = 256
-script = ExtResource("4_1ei8k")
-enemiesThatCanSpawn = Array[String](["Enemy"])
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea2" unique_id=1578761326]
-position = Vector2(1167, 193)
-shape = SubResource("RectangleShape2D_0ib4m")
-
 [node name="SpawnArea" type="Area2D" parent="EnemySpawnManager" unique_id=479281301]
 position = Vector2(-108, -358)
-collision_layer = 256
-collision_mask = 256
 script = ExtResource("4_1ei8k")
 enemiesThatCanSpawn = Array[String](["Enemy"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea" unique_id=712328504]
 position = Vector2(902.25, 856)
 shape = SubResource("RectangleShape2D_1ei8k")
-
-[node name="SpawnArea5" type="Area2D" parent="EnemySpawnManager" unique_id=602760432]
-position = Vector2(-864, -2864)
-collision_layer = 256
-collision_mask = 256
-script = ExtResource("4_1ei8k")
-enemiesThatCanSpawn = Array[String](["Enemy"])
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea5" unique_id=187812205]
-position = Vector2(-505.89063, 2873.75)
-shape = SubResource("RectangleShape2D_ufjxb")
-
-[node name="SpawnArea4" type="Area2D" parent="EnemySpawnManager" unique_id=1496695932]
-position = Vector2(-432, -1432)
-collision_layer = 256
-collision_mask = 256
-script = ExtResource("4_1ei8k")
-enemiesThatCanSpawn = Array[String](["Enemy"])
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea4" unique_id=893922437]
-position = Vector2(-90.5625, 2188.75)
-shape = SubResource("RectangleShape2D_iq2kk")
-
-[node name="SpawnArea3" type="Area2D" parent="EnemySpawnManager" unique_id=726073496]
-position = Vector2(-216, -716)
-collision_layer = 256
-collision_mask = 256
-script = ExtResource("4_1ei8k")
-enemiesThatCanSpawn = Array[String](["Enemy"])
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea3" unique_id=420485195]
-position = Vector2(-473.125, 82.5)
-shape = SubResource("RectangleShape2D_gqn7c")

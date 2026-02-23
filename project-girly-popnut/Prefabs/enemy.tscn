@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dinmwy8a1wuki"]
+
+[ext_resource type="Script" uid="uid://djhl7ue6flptu" path="res://Scripts/enemy.gd" id="1_lgw76"]
+[ext_resource type="Script" uid="uid://dfvbjqx8l3d55" path="res://Scripts/global_manager.gd" id="2_t4g6b"]
+[ext_resource type="Script" uid="uid://b2d2rxlkxmlvm" path="res://Scripts/health_bar.gd" id="3_t4g6b"]
+
+[sub_resource type="Gradient" id="Gradient_y6xdh"]
+offsets = PackedFloat32Array(0, 0.560241, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.11858783, 0.9999998, 0.32465428, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hrima"]
+gradient = SubResource("Gradient_y6xdh")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_csn78"]
+radius = 25.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgw76"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4g6b"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(6.978959e-06, 0.892672, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1414065949]
+z_as_relative = false
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_lgw76")
+speed = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=844369602]
+z_index = 2
+scale = Vector2(0.78125, 0.78125)
+texture = SubResource("GradientTexture2D_hrima")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=363670531]
+shape = SubResource("CircleShape2D_csn78")
+
+[node name="GlobalManager" type="Node2D" parent="." unique_id=1826654775]
+script = ExtResource("2_t4g6b")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=593975493 node_paths=PackedStringArray("character")]
+z_index = 2
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -35.0
+offset_right = 25.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_lgw76")
+theme_override_styles/fill = SubResource("StyleBoxFlat_t4g6b")
+max_value = 1.0
+value = 1.0
+show_percentage = false
+script = ExtResource("3_t4g6b")
+character = NodePath("..")
