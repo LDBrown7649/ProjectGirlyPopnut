@@ -62,4 +62,4 @@ func Shoot(pos, dir, shooter):
 	direction = dir	
 	targetPosition = pos
 	freeze = false
-	linear_velocity = direction * speed
+	linear_velocity = (direction * speed) + shooter.velocity
