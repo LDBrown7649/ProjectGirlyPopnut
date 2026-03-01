@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8mwuq7vjl6wf"
-path="res://.godot/imported/bird FlapDown.png-023697ad9853307c98b05713c6aa2604.ctex"
+uid="uid://dyema6gnbwhk3"
+path="res://.godot/imported/Crow Downflap.png-97f6ed716477af18174f12ace0056adc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bird FlapDown.png"
-dest_files=["res://.godot/imported/bird FlapDown.png-023697ad9853307c98b05713c6aa2604.ctex"]
+source_file="res://Art/Crow/Crow Downflap.png"
+dest_files=["res://.godot/imported/Crow Downflap.png-97f6ed716477af18174f12ace0056adc.ctex"]
 
 [params]
 

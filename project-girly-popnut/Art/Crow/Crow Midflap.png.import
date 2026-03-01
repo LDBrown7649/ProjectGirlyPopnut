@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cau0ibjsf1ixe"
-path="res://.godot/imported/bird FlapMid.png-d34a73adf28c4dc651c3c54f785ae685.ctex"
+uid="uid://b8b5dywu7fio5"
+path="res://.godot/imported/Crow Midflap.png-bf4cb4471325392d45535cae82677a39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bird FlapMid.png"
-dest_files=["res://.godot/imported/bird FlapMid.png-d34a73adf28c4dc651c3c54f785ae685.ctex"]
+source_file="res://Art/Crow/Crow Midflap.png"
+dest_files=["res://.godot/imported/Crow Midflap.png-bf4cb4471325392d45535cae82677a39.ctex"]
 
 [params]
 

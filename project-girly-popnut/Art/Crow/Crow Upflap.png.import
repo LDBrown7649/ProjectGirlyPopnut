@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj815knafwol6"
-path="res://.godot/imported/bird FlapUp.png-4d71b2ecb26464d4ecffa434fd464111.ctex"
+uid="uid://cb8mln5mi0xsm"
+path="res://.godot/imported/Crow Upflap.png-67cb1ddfd8cd45b464ed13d060d96ca4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/bird FlapUp.png"
-dest_files=["res://.godot/imported/bird FlapUp.png-4d71b2ecb26464d4ecffa434fd464111.ctex"]
+source_file="res://Art/Crow/Crow Upflap.png"
+dest_files=["res://.godot/imported/Crow Upflap.png-67cb1ddfd8cd45b464ed13d060d96ca4.ctex"]
 
 [params]
 
