@@ -2,17 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://j2hmnkk288h4" path="res://Prefabs/player.tscn" id="1_034j0"]
 [ext_resource type="PackedScene" uid="uid://dinmwy8a1wuki" path="res://Prefabs/enemy.tscn" id="2_g6lpq"]
+[ext_resource type="Texture2D" uid="uid://dtytwq5bscaai" path="res://Art/Wood_Floor.png" id="2_g7mqf"]
 [ext_resource type="Script" uid="uid://bqm82ijgwimnk" path="res://Scripts/enemy_spawn_manager.gd" id="3_034j0"]
 [ext_resource type="Script" uid="uid://lfsat02oebop" path="res://Scripts/enemy_spawn_config_list.gd" id="4_0ib4m"]
 [ext_resource type="Script" uid="uid://dxnodnd1yclw1" path="res://Scripts/enemy_spawn_area.gd" id="4_1ei8k"]
 [ext_resource type="Script" uid="uid://c7rjwpjtch5oq" path="res://Scripts/enemy_spawn_config.gd" id="5_ufjxb"]
 [ext_resource type="Texture2D" uid="uid://dr4myx2hnp55t" path="res://Art/Diner_Wall.png" id="7_iq2kk"]
 [ext_resource type="Texture2D" uid="uid://cw3kvviy7yqvl" path="res://Art/Kitchen_Door.png" id="7_ufjxb"]
-[ext_resource type="PackedScene" path="res://Prefabs/DiningBooth.tscn" id="9_gqn7c"]
+[ext_resource type="PackedScene" uid="uid://pc735l5wa8ux" path="res://Prefabs/DiningBooth.tscn" id="9_gqn7c"]
 [ext_resource type="Texture2D" uid="uid://bemqf1lc7d0if" path="res://Art/Cupboard.png" id="10_6v2gh"]
 [ext_resource type="Texture2D" uid="uid://da1tntlouokn" path="res://Art/Store_Door.png" id="11_vpyoe"]
 [ext_resource type="Texture2D" uid="uid://d0d420scygs4u" path="res://Art/Window.png" id="12_g63sl"]
-[ext_resource type="PackedScene" path="res://Prefabs/counter.tscn" id="13_vpyoe"]
+[ext_resource type="PackedScene" uid="uid://cun6lttx03g20" path="res://Prefabs/counter.tscn" id="13_vpyoe"]
 [ext_resource type="Texture2D" uid="uid://duv7pl4cwmtvs" path="res://Art/Purple_Record.png" id="14_drr2p"]
 [ext_resource type="Texture2D" uid="uid://cmqht0cdyqal" path="res://Art/Pink_Record.png" id="15_6xfpo"]
 [ext_resource type="Texture2D" uid="uid://2dfulrimmovp" path="res://Art/Blue_Record.png" id="16_xccmc"]
@@ -22,9 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://csrpotrltvbss" path="res://Art/Coffee_Mug.png" id="20_y0lar"]
 [ext_resource type="Texture2D" uid="uid://bowpub6wnwkav" path="res://Art/Straw_Shake.png" id="21_bv0jv"]
 [ext_resource type="Texture2D" uid="uid://b2imu17fwyb2q" path="res://Art/Choc_Shake.png" id="22_g7mqf"]
-[ext_resource type="PackedScene" path="res://Prefabs/juke_box.tscn" id="23_kpi7b"]
-[ext_resource type="PackedScene" path="res://Prefabs/Table1.tscn" id="24_bv0jv"]
-[ext_resource type="PackedScene" path="res://Prefabs/Table2.tscn" id="25_g7mqf"]
+[ext_resource type="PackedScene" uid="uid://ce3ttcqjnlyee" path="res://Prefabs/juke_box.tscn" id="23_kpi7b"]
+[ext_resource type="PackedScene" uid="uid://c5yjlau7sy0e2" path="res://Prefabs/Table1.tscn" id="24_bv0jv"]
+[ext_resource type="PackedScene" uid="uid://71q20iw1raeq" path="res://Prefabs/Table2.tscn" id="25_g7mqf"]
 
 [sub_resource type="Gradient" id="Gradient_bv0jv"]
 interpolation_mode = 2
@@ -35,13 +36,6 @@ colors = PackedColorArray(0.9534022, 0.8220846, 0.894137, 1, 0.94, 0.44180003, 0
 gradient = SubResource("Gradient_bv0jv")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="Gradient" id="Gradient_ku2vv"]
-offsets = PackedFloat32Array(0.9698795, 1)
-colors = PackedColorArray(0.86, 0.645, 0.34399998, 1, 0.77262354, 0.5052726, 0.23265731, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_thia8"]
-gradient = SubResource("Gradient_ku2vv")
 
 [sub_resource type="Resource" id="Resource_iq2kk"]
 script = ExtResource("5_ufjxb")
@@ -84,9 +78,23 @@ zoom = Vector2(0.7, 0.7)
 scale = Vector2(93.805405, 68.6854)
 texture = SubResource("GradientTexture2D_g7mqf")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=983906610]
-scale = Vector2(51.168056, 27.198944)
-texture = SubResource("GradientTexture2D_thia8")
+[node name="Floor" type="TextureRect" parent="." unique_id=1143437522]
+offset_left = -1640.0
+offset_top = -877.0
+offset_right = 1327.6055
+offset_bottom = 2318.4653
+scale = Vector2(1.1035833, 0.5435828)
+texture = ExtResource("2_g7mqf")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=255144015]
+offset_left = -1640.0
+offset_top = -1336.0001
+offset_right = 8126.795
+offset_bottom = 52.999878
+scale = Vector2(0.33542222, 0.33542222)
+texture = ExtResource("7_iq2kk")
+stretch_mode = 1
 
 [node name="Enemy" parent="." unique_id=1414065949 instance=ExtResource("2_g6lpq")]
 position = Vector2(321.45688, 210.91354)
@@ -172,16 +180,6 @@ enemiesThatCanSpawn = Array[String](["Enemy"])
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySpawnManager/SpawnArea3" unique_id=420485195]
 position = Vector2(-473.125, 82.5)
 shape = SubResource("RectangleShape2D_gqn7c")
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=292064662]
-texture_filter = 1
-scale = Vector2(0.335, 0.336)
-scroll_offset = Vector2(0, -1103)
-repeat_size = Vector2(208.275, 0)
-repeat_times = 45
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1340353962]
-texture = ExtResource("7_iq2kk")
 
 [node name="KitchenDoor" type="Sprite2D" parent="." unique_id=1900393023]
 position = Vector2(-708, -1067)
